@@ -1,5 +1,5 @@
-name: LONGX Android APK Buil
-d
+
+name: LONGX Android APK Build
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+          cache: gradle
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
@@ -46,10 +47,11 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
 
-      - - name: Setup Android SDK
-  uses: android-actions/setup-android@v4
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: LONGX-WIFI-MARKETPLACE-APK
           path: frontend/android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
+

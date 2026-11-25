@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LONGX WIFI MARKETPLACE</string>
+    <string name="title_activity_main">LONGX WIFI MARKETPLACE</string>
+    <string name="package_name">tz.longx.wifimarketplace</string>
+    <string name="custom_url_scheme">tz.longx.wifimarketplace</string>
+</resources>

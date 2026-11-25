@@ -2,3 +2,9 @@
 node_modules/
 dist/
 backend/data/*.db
+
+# Android local and generated files
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/android/**/build/
+frontend/android/.idea/
